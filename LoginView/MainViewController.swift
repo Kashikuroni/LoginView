@@ -47,7 +47,10 @@ class ViewController: UIViewController {
 // MARK: - Private Methods
 extension ViewController{
     private func showAlert(with title: String, and massage: String){
-        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: title,
+            message: massage,
+            preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         
         alert.addAction(okAction)
