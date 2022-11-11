@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = user
     }
+    // Метод для скрытия клавиатуры тапом по экрану у меня почему-то не работает, может я что-то должен сюда добавить но так и не понял что именно(((
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
     
     @IBAction func loginAction() {
         if userNameTF.text != user || passwordTF.text != password {
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
         userNameTF.text = ""
         passwordTF.text = ""
     }
+    
 }
 // MARK: - Private Methods
 extension ViewController{
